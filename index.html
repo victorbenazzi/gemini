@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://esm.run/@google/generative-ai"></script>
+    <title>Vite App</title>
+  </head>
+  <body
+    class="antialized flex flex-col items-center justify-center bg-zinc-100">
+    <div
+      id="app"
+      class="flex flex-col items-center justify-center w-[40%] gap-y-4">
+      <div
+        class="w-full max-h-[500px] h-[500px] bg-white border border-neutral-200 rounded-xl py-6 px-4 overflow-y-scroll">
+        <div
+          id="ai-response"
+          class="p-2 bg-zinc-100 rounded-lg w-fit h-fit"></div>
+      </div>
+      <form action="" class="flex flex-col items-center justify-center w-full">
+        <div
+          class="flex flex-row bg-white border border-neutral-200 rounded-xl w-full overflow-hidden">
+          <input
+            id="question"
+            type="text"
+            class="h-10 w-full bg-transparent focus:outline-none pl-4" />
+          <button
+            id="Button"
+            class="bg-zinc-900 text-zinc-50 py-2 px-4 rounded-lg text-sm hover:bg-zinc-800">
+            Enviar
+          </button>
+        </div>
+      </form>
+      <div id="loading-indicator" style="display: none">Carregando...</div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
